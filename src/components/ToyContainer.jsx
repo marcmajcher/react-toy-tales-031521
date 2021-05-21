@@ -5,7 +5,12 @@ const ToyContainer = (props) => {
   return (
     <div id="toy-collection">
       {props.toys.map((toy) => (
-        <ToyCard toy={toy} key={toy.id} />
+        <ToyCard
+          toy={toy}
+          key={toy.id}
+          deleteToy={props.deleteToy}
+          addLike={props.addLike}
+        />
       ))}
     </div>
   );

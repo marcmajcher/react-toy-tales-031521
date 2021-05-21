@@ -8,7 +8,7 @@ class ToyForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addNewtoy(this.state);
+    this.props.addNewtoy({...this.state});
     this.setState({ name: '', image: '' });
   };
 
